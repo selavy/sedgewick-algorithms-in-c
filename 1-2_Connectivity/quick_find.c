@@ -15,14 +15,14 @@ int main(int argc, char **argv) {
     }
 
     while (scanf("%d-%d\n", &p, &q) == 2) {
-        // QuickFind:
+        // QuickFind: O(1)
         // if equal then they are in the same set
         if (id[p] == id[q]) {
             continue;
         }
 
 
-        // Slow Union:
+        // Slow Union: O(n)
         t = id[p]; // name of set that `p' is in
         for (i = 0; i < N; ++i) {
             // if `i' was in set t, put it in the same
